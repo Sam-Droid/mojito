@@ -50,5 +50,13 @@ public class View {
     /**
      * This is used to show the branch statistics
      */
-    public interface BranchStatistic extends BranchSummary, TmTextUnitSummary {}
+    public interface BranchStatistic extends BranchSummary, TmTextUnitSummary, Pageable {}
+    /**
+     * This is used to show git blame information
+     */
+    public interface GitBlame extends IdAndName {};
+    /**
+     * This is used to show git bame information with usages
+     */
+    public interface GitBlameWithUsage extends GitBlame, BranchSummary {};
 }

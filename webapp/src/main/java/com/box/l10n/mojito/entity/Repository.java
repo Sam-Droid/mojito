@@ -4,6 +4,7 @@ import com.box.l10n.mojito.entity.security.user.User;
 import com.box.l10n.mojito.rest.View;
 import com.box.l10n.mojito.service.drop.exporter.DropExporterType;
 import com.box.l10n.mojito.service.repository.RepositoryService;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.hibernate.envers.Audited;
@@ -66,9 +67,9 @@ public class Repository extends AuditableEntity {
     @OneToMany(mappedBy = "repository", fetch = FetchType.EAGER)
     Set<AssetIntegrityChecker> assetIntegrityCheckers = new HashSet<>();
 
-    @JsonManagedReference
     @OneToMany(mappedBy = "repository", fetch = FetchType.EAGER)
     @NotAudited
+    @JsonBackReference
     Set<Branch> branches = new HashSet<>();
 
     @OneToOne
