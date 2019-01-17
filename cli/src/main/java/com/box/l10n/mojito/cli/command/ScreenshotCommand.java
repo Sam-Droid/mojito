@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -118,7 +117,7 @@ public class ScreenshotCommand extends Command {
             processImage(imagePath, screenshotRun);
         }
 
-        screenshotClient.uploadScreenshots(screenshotRun);
+        screenshotClient.uploadScreenshotRun(screenshotRun);
     }
 
     void processImage(Path imagePath, ScreenshotRun screenshotRun) throws CommandException {

@@ -24,9 +24,9 @@ public class ScreenshotClient extends BaseClient {
         return "screenshots";
     }
 
-    public void uploadScreenshots(ScreenshotRun screenshotRun) {
+    public void uploadScreenshotRun(ScreenshotRun screenshotRun) {
         logger.debug("Upload screenshots into repository = {}", screenshotRun.getRepository().getName());
-        authenticatedRestTemplate.postForObject(getBasePath() + "/screenshots", screenshotRun, Void.class);
+        authenticatedRestTemplate.postForObject(getBasePath() + "/screenshots/run", screenshotRun, Void.class);
     }
 
     public AuthenticatedRestTemplate getAuthenticatedRestTemplate() {

@@ -94,7 +94,7 @@ public class ScreenshotWSTest extends WSTestBase {
         screenshot2.setLocale(locale);
         screenshotRun.getScreenshots().add(screenshot2);
         
-        screenshotClient.uploadScreenshots(screenshotRun);
+        screenshotClient.uploadScreenshotRun(screenshotRun);
         List<Screenshot> searchScreenshots = screenshotService.searchScreenshots(Arrays.asList(
                 repository.getId()), 
                 null, null, null, null, null, null, null, 10, 0);
