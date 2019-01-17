@@ -63,9 +63,19 @@ public class ScreenshotService {
     @Autowired
     EntityManager em;
 
+//
+//    public Screenshot createScreenshot(Screenshot screenshot) {
+//
+//        // lookup the default run
+//        // problem UI filter by run right now
+//
+//
+//
+//    }
+
     /**
      * Creates or update a screenshot run including the creation of related
-     * screenshots. If updating a screenshot run then new screenshots get addes
+     * screenshots. If updating a screenshot run then new screenshots get added
      *
      * @param screenshotRun the screenshot run information, contains a list of
      * screenshot to be persisted

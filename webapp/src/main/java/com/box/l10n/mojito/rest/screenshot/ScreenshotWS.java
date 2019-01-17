@@ -36,6 +36,12 @@ public class ScreenshotWS {
         return screenshotRunSaved;
     }
 
+//    @RequestMapping(value = "/api/screenshots", method = RequestMethod.POST)
+//    public ScreenshotRun createOrUpdateScreenshotRun(@RequestBody Screenshot screenshot) {
+//        ScreenshotRun screenshotRunSaved = screenshotService.createOrUpdateScreenshotRun(screenshotRun);
+//        return screenshotRunSaved;
+//    }
+
     @RequestMapping(value = "/api/screenshots", method = RequestMethod.GET)
     public List<Screenshot> getScreeenshots(
             @RequestParam(value = "repositoryIds[]", required = false) ArrayList<Long> repositoryIds,
